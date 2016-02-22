@@ -3,6 +3,7 @@
   <Role name="PipelineRole">
     <Instances count="1" />
     <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=remoteeffectservice;AccountKey=td9SdGcYVwBZOaYEY0SoSzsTG8ovf//i8NSxGdFLO+8NcEkjNzLRR6Q6jfElonNEl5PI/lHd/Y3IY+1RShTdNQ==" />
     </ConfigurationSettings>
     <Certificates>
       <Certificate name="pipelinessl" thumbprint="7CD7C89BF1B8F12B4C235A39D7F046B2DCFACA0D" thumbprintAlgorithm="sha1" />

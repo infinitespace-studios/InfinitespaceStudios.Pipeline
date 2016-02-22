@@ -27,9 +27,13 @@ namespace InfinitespaceStudios.Pipeline.Processors
 		[DefaultValue ("443")]
 		public string RemotePort { get; set; }
 
+        [DefaultValue ("https")]
+        public string Protocol { get; set; }
+
 		public RemoteEffectProcessor ()
 		{
 			RemotePort = "443";
+            Protocol = "https";
 			RemoteAddress = "pipeline.infinitespace-studios.co.uk";
 		}
 
@@ -41,7 +45,7 @@ namespace InfinitespaceStudios.Pipeline.Processors
 			var code = input.EffectCode;
 			var platform = context.TargetPlatform;
 			var client = new HttpClient ();
-			client.BaseAddress = new Uri (string.Format ("https://{0}:{1}/", RemoteAddress, RemotePort));
+			client.BaseAddress = new Uri (string.Format ("{0}://{1}:{2}/", Protocol, RemoteAddress, RemotePort));
 			var response = client.PostAsync ("api/Effect", new StringContent (JsonSerializer (new Data  () {
 				Platform = platform.ToString(),
 				Code = code

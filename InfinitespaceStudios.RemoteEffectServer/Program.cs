@@ -18,7 +18,7 @@ namespace InfinitespaceStudios.RemoteEffectServer
 
 
             var listener = new System.Net.HttpListener();
-            listener.Prefixes.Add(string.Format("http://*:{0}/effect/", port));
+            listener.Prefixes.Add(string.Format("http://*:{0}/api/Effect/", port));
             listener.Start();
             ThreadPool.QueueUserWorkItem((o) =>
             {
