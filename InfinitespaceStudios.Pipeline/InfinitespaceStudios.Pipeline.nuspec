@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>InfinitespaceStudios.Pipeline</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <title>Infinitespace Studios MonoGame Pipeline Extensions</title>
     <authors>Dean Ellis</authors>
     <owners>www.infinitespace-studios.co.uk</owners>

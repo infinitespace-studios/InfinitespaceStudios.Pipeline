@@ -18,7 +18,7 @@ using System.ComponentModel;
 
 namespace InfinitespaceStudios.Pipeline.Processors
 {
-	[ContentProcessor (DisplayName = "Remote Effect Processor - MonoGame")]
+	[ContentProcessor (DisplayName = "Remote Effect Processor - Infinitespace Studios")]
 	class RemoteEffectProcessor : EffectProcessor
 	{
 		[DefaultValue("pipeline.infinitespace-studios.co.uk")]
