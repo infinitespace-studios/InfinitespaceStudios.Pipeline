@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
+# Visual Studio 2012
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfinitespaceStudios.Pipeline", "InfinitespaceStudios.Pipeline.csproj", "{33C83BF8-CB58-4031-B029-2F8B9686EE81}"
