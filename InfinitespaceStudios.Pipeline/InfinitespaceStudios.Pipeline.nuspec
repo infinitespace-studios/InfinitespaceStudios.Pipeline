@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>InfinitespaceStudios.Pipeline</id>
+    <version>1.0.0</version>
+    <title>Infinitespace Studios MonoGame Pipeline Extensions</title>
+    <authors>Dean Ellis</authors>
+    <owners>www.infinitespace-studios.co.uk</owners>
+    <licenseUrl>http://opensource.org/licenses/MS-PL</licenseUrl>
+    <projectUrl> https://github.com/infinitespace-studios/InfinitespaceStudios.Pipeline</projectUrl>
+    <iconUrl>https://avatars1.githubusercontent.com/u/6338296</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+      This package contains open source content pipeline extensions for MonoGame.
+      
+      * RemoteEffectProcessor for building Effect files on Mac and Linux.
+      
+      Full source code available at https://github.com/infinitespace-studios/InfinitespaceStudios.Pipeline
+    </description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright Infinitespace Studios 2016</copyright>
+    <tags></tags>
+    <dependencies>
+    </dependencies>
+  </metadata>
+    <files>
+      <file src="bin/Release/InfinitespaceStudios.Pipeline.dll" target="tools\InfinitespaceStudios.Pipeline.dll" />
+      <file src="bin/Release/Newtonsoft.Json.dll" target="tools\Newtonsoft.Json.dll" />
+    </files>
+</package>
