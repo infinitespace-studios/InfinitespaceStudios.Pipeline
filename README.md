@@ -19,14 +19,32 @@ Options 2) and 3) will require the *RemoteAddress* , *RemotePort* and *Protocol*
 
 If you want to use the *default* service
 
-1. Add a Nuget Package . InfinitespaceStudios.Pipeline
-2. Open your Content.mgcb files in the Pipeline Tool.
-3. Click the Content Node and double click on the Refernce Property in the property grid.
-4. Find the InfinitespaceStudios.Pipeline.dll  in `packages\InfinitespaceStudios.Pipeline.X.X.X\Tools\InfinitespaceStudios.Pipeleine.dll`
-5. Select the Effect .fx file
-6. Change the Processor to be  "Remote Effect Processor - Infinitespace Studios"
-    (If it does not show up in the list, close and open the Content.mgcb file)
-7. Go back to your app and Run.
+1. Open your project and find the Packages Folder. Right click and select Add Packages.
 
-If you need to change to your own service enter the correct details in the properties for *RemoteAddress* , *RemotePort* and *Protocol*.
-For the local Server you will need to use http for the *Protocol* property. If you host your own you will need to use http unless you have your own SSL certificate.
+    ![](https://github.com/infinitespace-studios/InfinitespaceStudios.Pipeline/wiki/images/AddPackage.png)
+
+2. This will open the Nuget search Dialog. Search for "InfinitespaceStudios.Pipeline" and add the Package.
+
+    ![](https://github.com/infinitespace-studios/InfinitespaceStudios.Pipeline/wiki/images/Add.png)
+
+3. Once the package has been added. Open the Content.mgcb file in the Pipeline Editor.
+
+    ![](https://github.com/infinitespace-studios/InfinitespaceStudios.Pipeline/wiki/images/OpenContent.png)
+
+4. Select the "Content" node and then find the References property in the property grid. Double click the References property to bring up the Add References Dialog.
+
+    ![](https://github.com/infinitespace-studios/InfinitespaceStudios.Pipeline/wiki/images/AddPipeline.png)
+
+5. Search for the "InfinitespaceStudios.Pipeline.dll" and Add it by clicking on the "Add" button. Note this should be located in the "packages\InfinitespaceStudios.Pipeline.X.X.X\Tools" folder.
+
+    ![](https://github.com/infinitespace-studios/InfinitespaceStudios.Pipeline/wiki/images/ChangeProcessor.png)
+
+6. Once that is done, Save the Content.mgcb. Close it an re open it (there is a bug in the Pipeline Tool). The select the .fx file you want to change. Select the Processor property and in the drop down you should see "Remote Effect Processor - Infinitespace Studios". Select this Item.
+
+    ![](https://github.com/infinitespace-studios/InfinitespaceStudios.Pipeline/wiki/images/RemoteEffect.png)
+
+7. If you are using the defaults just Save the Content.mcgb. Close the Pipeline tool and Build and Run you app. It should compile without any issues. If there is a problem with the .fx file the error will be reported in the build log.
+
+    ![](https://github.com/infinitespace-studios/InfinitespaceStudios.Pipeline/wiki/images/BuildAndRun.png)
+
+If you are using a Custom Azure site or the Local Service on a Windows box you can use the *RemoteAddress* , *RemotePort* and *Protocol* properties to change the location of the server. Valid *Protocol* values are "http" and "https" if you have a secured service. The *RemoteAddress* can be a CNAME or IP address. 
