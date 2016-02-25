@@ -35,11 +35,11 @@ If you want to use the *default* service
 
     ![](https://github.com/infinitespace-studios/InfinitespaceStudios.Pipeline/wiki/images/AddPipeline.png)
 
-5. Search for the "InfinitespaceStudios.Pipeline.dll" and Add it by clicking on the "Add" button. Note this should be located in the "packages\InfinitespaceStudios.Pipeline.X.X.X\Tools" folder.
+5. Search for the "InfinitespaceStudios.Pipeline.dll" and Add it by clicking on the "Add" button. Note this should be located in the "packages\InfinitespaceStudios.Pipeline.X.X.X\Tools" folder. Once that is done, Save the Content.mgcb. Close it an re open it (there is a bug in the Pipeline Tool). The select the .fx file you want to change. 
 
     ![](https://github.com/infinitespace-studios/InfinitespaceStudios.Pipeline/wiki/images/ChangeProcessor.png)
 
-6. Once that is done, Save the Content.mgcb. Close it an re open it (there is a bug in the Pipeline Tool). The select the .fx file you want to change. Select the Processor property and in the drop down you should see "Remote Effect Processor - Infinitespace Studios". Select this Item.
+6. Select the Processor property and in the drop down you should see "Remote Effect Processor - Infinitespace Studios". Select this Item.
 
     ![](https://github.com/infinitespace-studios/InfinitespaceStudios.Pipeline/wiki/images/RemoteEffect.png)
 
