@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>InfinitespaceStudios.Pipeline</id>
-    <version>1.0.7</version>
+    <version>1.0.8</version>
     <title>Infinitespace Studios MonoGame Pipeline Extensions</title>
     <authors>Dean Ellis</authors>
     <owners>www.infinitespace-studios.co.uk</owners>
@@ -17,8 +17,11 @@
       
       Full source code available at https://github.com/infinitespace-studios/InfinitespaceStudios.Pipeline
     </description>
-    <releaseNotes></releaseNotes>
-    <copyright>Copyright Infinitespace Studios 2016</copyright>
+    <releaseNotes>
+      * Added Xact Importer/Processor
+      * Extended the timeout on the HttpClient for large shader.
+    </releaseNotes>
+    <copyright>Copyright Infinitespace Studios 2017</copyright>
     <tags></tags>
     <dependencies>
     </dependencies>

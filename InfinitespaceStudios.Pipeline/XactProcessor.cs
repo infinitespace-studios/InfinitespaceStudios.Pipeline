@@ -40,7 +40,7 @@ namespace MonoGame.RemoteEffect
                 // extract wine and install XNA
                 if (!File.Exists (toolPath))
                 {
-                    throw new InvalidProgramException($"Could not locate {XactBld3Tool}. You need to install Wine and XNA Tooling. See http://foo.com for more details.");
+                    throw new InvalidProgramException($"Could not locate {XactBld3Tool}. You need to install Wine and XNA Tooling. See https://github.com/infinitespace-studios/InfinitespaceStudios.Pipeline/wiki for more details.");
                 }
             }
             

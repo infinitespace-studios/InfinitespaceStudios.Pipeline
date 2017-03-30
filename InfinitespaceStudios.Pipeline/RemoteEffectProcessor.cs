@@ -82,7 +82,10 @@ namespace InfinitespaceStudios.Pipeline.Processors
 			var code = ResolveCode (input);
 			var platform = context.TargetPlatform;
 			var version = typeof (EffectContent).Assembly.GetName ().Version;
-			var client = new HttpClient ();
+			var client = new HttpClient()
+            {
+                Timeout = TimeSpan.FromMinutes(5),
+            };
 			client.BaseAddress = new Uri (string.Format ("{0}://{1}:{2}/", Protocol, RemoteAddress, RemotePort));
 			var response = client.PostAsync ("api/Effect", new StringContent (JsonSerializer (new Data  () {
 				Platform = platform.ToString(),
