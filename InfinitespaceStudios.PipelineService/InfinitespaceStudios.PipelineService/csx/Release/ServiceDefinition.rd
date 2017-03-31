@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="InfinitespaceStudios.RemoteEffectService" generation="1" functional="0" release="0" Id="8b793c84-45a3-4684-a817-425bb4c21199" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="InfinitespaceStudios.RemoteEffectService" generation="1" functional="0" release="0" Id="ad9ff5b8-8b81-47b5-b3f7-2c7ede6fe672" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="InfinitespaceStudios.RemoteEffectServiceGroup" generation="1" functional="0" release="0">
       <componentports>
@@ -52,7 +52,7 @@
       </maps>
       <components>
         <groupHascomponents>
-          <role name="PipelineRole" generation="1" functional="0" release="0" software="C:\Sandbox\InfinitespaceStudios.Pipeline\InfinitespaceStudios.PipelineService\InfinitespaceStudios.PipelineService\csx\Release\roles\PipelineRole" entryPoint="base\x64\WaHostBootstrapper.exe" parameters="base\x64\WaIISHost.exe " memIndex="-1" hostingEnvironment="frontendadmin" hostingEnvironmentVersion="2">
+          <role name="PipelineRole" generation="1" functional="0" release="0" software="C:\Users\dean\Desktop\InfinitespaceStudios.Pipeline\InfinitespaceStudios.PipelineService\InfinitespaceStudios.PipelineService\csx\Release\roles\PipelineRole" entryPoint="base\x64\WaHostBootstrapper.exe" parameters="base\x64\WaIISHost.exe " memIndex="-1" hostingEnvironment="frontendadmin" hostingEnvironmentVersion="2">
             <componentports>
               <inPort name="secure" protocol="https" portRanges="443">
                 <certificate>
@@ -94,9 +94,9 @@
     </group>
   </groups>
   <implements>
-    <implementation Id="8bbb5e32-48b0-4373-8f31-10865e1017d6" ref="Microsoft.RedDog.Contract\ServiceContract\InfinitespaceStudios.RemoteEffectServiceContract@ServiceDefinition">
+    <implementation Id="7d7b33a7-f7d6-4c78-a139-df7fd17440fa" ref="Microsoft.RedDog.Contract\ServiceContract\InfinitespaceStudios.RemoteEffectServiceContract@ServiceDefinition">
       <interfacereferences>
-        <interfaceReference Id="926e87d2-c0a4-48cd-90a6-1d30845e9ceb" ref="Microsoft.RedDog.Contract\Interface\PipelineRole:secure@ServiceDefinition">
+        <interfaceReference Id="55cc0455-72d2-4846-938b-5e6c75c0fe77" ref="Microsoft.RedDog.Contract\Interface\PipelineRole:secure@ServiceDefinition">
           <inPort>
             <inPortMoniker name="/InfinitespaceStudios.RemoteEffectService/InfinitespaceStudios.RemoteEffectServiceGroup/PipelineRole:secure" />
           </inPort>

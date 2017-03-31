@@ -18,7 +18,7 @@ namespace RemoteEffectRole.Controllers
         {
             try {
                 string error = String.Empty;
-                byte[] buf = RunMGCB(value.Code, value.Platform, out error);
+                byte[] buf = RunMGCB(value.Code, value.Platform, value.Version, out error);
                 return new Result() { Compiled = buf, Error = error };
             } catch (Exception ex)
             {
@@ -26,7 +26,13 @@ namespace RemoteEffectRole.Controllers
             }
         }
 
-        static byte[] RunMGCB(string code, string platform, out string error)
+        static string GetVersion(string version)
+        {
+            var v =version.Split(new char[] { '.' });
+            return v.Length ==4 ? $"{v[0]}.{v[1]}" : version;
+        }
+
+        static byte[] RunMGCB(string code, string platform, string version, out string error)
         {
             string[] platforms = new string[]
             {
@@ -37,7 +43,11 @@ namespace RemoteEffectRole.Controllers
                 "OUYA",
             };
 
-            var mgfxExe = Path.Combine(HttpContext.Current.Server.MapPath(@"~\"),"Tools","2MGFX.exe");
+            var mgfxExe = Path.Combine(HttpContext.Current.Server.MapPath(@"~\"),"Tools", GetVersion(version),"2MGFX.exe");
+            if (!File.Exists (mgfxExe))
+            {
+                mgfxExe = Path.Combine(HttpContext.Current.Server.MapPath(@"~\"), "Tools", "2MGFX.exe");
+            }
             error = String.Empty;
             var tempPath = Path.GetFileName(Path.ChangeExtension(Path.GetTempFileName(), ".fx"));
             var xnb = Path.ChangeExtension(tempPath, ".mgfx");
@@ -91,5 +101,6 @@ namespace MonoGame.RemoteEffect
     {
         public string Platform { get; set; }
         public string Code { get; set; }
+        public string Version { get; set; }
     }
 }

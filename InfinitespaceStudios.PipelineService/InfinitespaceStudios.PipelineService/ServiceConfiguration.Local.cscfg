@@ -6,7 +6,7 @@
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
     </ConfigurationSettings>
     <Certificates>
-      <Certificate name="pipelinessl" thumbprint="7CD7C89BF1B8F12B4C235A39D7F046B2DCFACA0D" thumbprintAlgorithm="sha1" />
+      <Certificate name="pipelinessl" thumbprint="04113DD684AE63E66848235046F4E2A49F5FA97A" thumbprintAlgorithm="sha1" />
     </Certificates>
   </Role>
 </ServiceConfiguration>

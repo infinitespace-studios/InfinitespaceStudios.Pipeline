@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <AzureCredentials>{"ServiceManagementEndpoint":"https:\/\/management.core.windows.net\/","ResourceManagementEndpoint":"https:\/\/management.azure.com\/","SubscriptionId":"598ac3d6-7e89-45da-8139-a5a179b49b11"}</AzureCredentials>
+    <AzureCredentials>{"ServiceManagementEndpoint":"https:\/\/management.core.windows.net\/","ResourceManagementEndpoint":"https:\/\/management.azure.com\/","SubscriptionId":"b7d82ac8-6c37-47db-ac58-21fa2c7ff86c"}</AzureCredentials>
     <AzureDeleteDeploymentOnFailure>False</AzureDeleteDeploymentOnFailure>
     <AzureDeploymentLabel>InfinitespaceStudios.RemoteEffectService</AzureDeploymentLabel>
     <AzureDeploymentReplacementMethod>AutomaticUpgrade</AzureDeploymentReplacementMethod>
@@ -9,14 +9,16 @@
     <AzureEnableRemoteDesktop>True</AzureEnableRemoteDesktop>
     <AzureEnableWebDeploy>False</AzureEnableWebDeploy>
     <AzureFallbackToDeleteAndRecreateIfUpgradeFails>False</AzureFallbackToDeleteAndRecreateIfUpgradeFails>
-    <AzureHostedServiceLabel>RemoteEffectService</AzureHostedServiceLabel>
-    <AzureHostedServiceName>remoteeffectservice</AzureHostedServiceName>
+    <AzureHostedServiceLabel>RemoteEffectServiceVS</AzureHostedServiceLabel>
+    <AzureHostedServiceName>remoteeffectservicevs</AzureHostedServiceName>
     <AzureEnableIntelliTrace>False</AzureEnableIntelliTrace>
     <AzureEnableProfiling>False</AzureEnableProfiling>
     <AzureServiceConfiguration>Cloud</AzureServiceConfiguration>
     <AzureSolutionConfiguration>Release</AzureSolutionConfiguration>
-    <AzureStorageAccountLabel>RemoteEffectService</AzureStorageAccountLabel>
-    <AzureStorageAccountName>remoteeffectservice</AzureStorageAccountName>
+    <AzureStorageAccountLabel>RemoteEffectServiceVS</AzureStorageAccountLabel>
+    <AzureStorageAccountName>remoteeffectservicevs</AzureStorageAccountName>
     <AzureAppendTimestampToDeploymentLabel>True</AzureAppendTimestampToDeploymentLabel>
+    <AzureHostedServiceResourceGroup>remoteeffectservicevs</AzureHostedServiceResourceGroup>
+    <EnableApplicationInsights>False</EnableApplicationInsights>
   </PropertyGroup>
 </Project>
