@@ -19,7 +19,7 @@ using System.ComponentModel;
 namespace InfinitespaceStudios.Pipeline.Processors
 {
 	[ContentProcessor (DisplayName = "Remote Effect Processor - Infinitespace Studios")]
-	class RemoteEffectProcessor : EffectProcessor
+	public sealed class RemoteEffectProcessor : EffectProcessor
 	{
 		[DefaultValue("pipeline.infinitespace-studios.co.uk")]
 		public string RemoteAddress { get; set; }
