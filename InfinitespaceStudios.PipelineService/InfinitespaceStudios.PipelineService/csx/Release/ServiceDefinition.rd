@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="InfinitespaceStudios.RemoteEffectService" generation="1" functional="0" release="0" Id="147e324c-0bca-434d-b6e6-3b0480a0f80c" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="InfinitespaceStudios.RemoteEffectService" generation="1" functional="0" release="0" Id="7a5cefa7-c966-431f-9b0f-b8d5f22fc04b" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="InfinitespaceStudios.RemoteEffectServiceGroup" generation="1" functional="0" release="0">
       <componentports>
@@ -94,9 +94,9 @@
     </group>
   </groups>
   <implements>
-    <implementation Id="a9aca498-2975-4c1d-bf93-3c042f32d293" ref="Microsoft.RedDog.Contract\ServiceContract\InfinitespaceStudios.RemoteEffectServiceContract@ServiceDefinition">
+    <implementation Id="15b0eeeb-dd7e-41b7-ad77-029b2a36cdf0" ref="Microsoft.RedDog.Contract\ServiceContract\InfinitespaceStudios.RemoteEffectServiceContract@ServiceDefinition">
       <interfacereferences>
-        <interfaceReference Id="6a638e48-8b93-4113-bb9d-2b16ccfc1ba5" ref="Microsoft.RedDog.Contract\Interface\PipelineRole:secure@ServiceDefinition">
+        <interfaceReference Id="ba6b4181-95ac-4194-8b0c-559cc128048e" ref="Microsoft.RedDog.Contract\Interface\PipelineRole:secure@ServiceDefinition">
           <inPort>
             <inPortMoniker name="/InfinitespaceStudios.RemoteEffectService/InfinitespaceStudios.RemoteEffectServiceGroup/PipelineRole:secure" />
           </inPort>

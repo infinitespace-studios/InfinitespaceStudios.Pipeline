@@ -16,8 +16,9 @@ namespace InfinitespaceStudios.RemoteEffectServer
 		{
 			var port = args.Length == 1 ? int.Parse (args [0]) : 8001;
 
-
             var listener = new System.Net.HttpListener();
+            // for Non Admin rights
+            // netsh http add urlacl url=http://*:8001/api/Effect user=DOMAIN/user
             listener.Prefixes.Add(string.Format("http://*:{0}/api/Effect/", port));
             listener.Start();
             ThreadPool.QueueUserWorkItem((o) =>
