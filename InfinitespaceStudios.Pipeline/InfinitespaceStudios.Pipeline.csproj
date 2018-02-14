@@ -32,6 +32,8 @@
     <Compile Include="XactImporter.cs" />
     <Compile Include="XactProcessor.cs" />
     <Compile Include="XapProjectFile.cs" />
+    <Compile Include="RemoteEffectMaterialProcessor.cs" />
+    <Compile Include="RemoteEffectModelProcessor.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
