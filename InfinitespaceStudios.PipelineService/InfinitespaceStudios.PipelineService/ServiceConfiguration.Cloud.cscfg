@@ -6,7 +6,7 @@
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=remoteeffectservice;AccountKey=td9SdGcYVwBZOaYEY0SoSzsTG8ovf//i8NSxGdFLO+8NcEkjNzLRR6Q6jfElonNEl5PI/lHd/Y3IY+1RShTdNQ==" />
     </ConfigurationSettings>
     <Certificates>
-      <Certificate name="pipelinessl" thumbprint="04113DD684AE63E66848235046F4E2A49F5FA97A" thumbprintAlgorithm="sha1" />
+      <Certificate name="pipelinessl" thumbprint="B129679D3795C1F30620096418D43FBC9D6D07A9" thumbprintAlgorithm="sha1" />
     </Certificates>
   </Role>
 </ServiceConfiguration>

@@ -18,8 +18,9 @@ namespace RemoteEffectRole.Controllers
         {
             try {
                 string error = String.Empty;
-                byte[] buf = RunMGCB(value.Code, value.Platform, value.Version, out error);
-                return new Result() { Compiled = buf, Error = error };
+                string compiledWith = String.Empty;
+                byte[] buf = RunMGCB(value.Code, value.Platform, value.Version, out error, out compiledWith);
+                return new Result() { Compiled = buf, Error = error, CompiledWith = compiledWith };
             } catch (Exception ex)
             {
                 return new Result() { Error = ex.ToString() };
@@ -32,7 +33,7 @@ namespace RemoteEffectRole.Controllers
             return v.Length ==4 ? $"{v[0]}.{v[1]}" : version;
         }
 
-        static byte[] RunMGCB(string code, string platform, string version, out string error)
+        static byte[] RunMGCB(string code, string platform, string version, out string error, out string compiledWith)
         {
             string[] platforms = new string[]
             {
@@ -43,9 +44,11 @@ namespace RemoteEffectRole.Controllers
                 "OUYA",
             };
 
-            var mgfxExe = Path.Combine(HttpContext.Current.Server.MapPath(@"~\"),"Tools", GetVersion(version),"2MGFX.exe");
+            compiledWith = GetVersion(version);
+            var mgfxExe = Path.Combine(HttpContext.Current.Server.MapPath(@"~\"),"Tools", compiledWith, "2MGFX.exe");
             if (!File.Exists (mgfxExe))
             {
+                compiledWith = "3.5";
                 mgfxExe = Path.Combine(HttpContext.Current.Server.MapPath(@"~\"), "Tools", "2MGFX.exe");
             }
             error = String.Empty;
@@ -96,6 +99,8 @@ namespace MonoGame.RemoteEffect
         public byte[] Compiled { get; set;  }
 
         public string Error { get; set;  }
+
+        public string CompiledWith { get; set; }
     }
     public class Data
     {
