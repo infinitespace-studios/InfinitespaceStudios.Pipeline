@@ -18,22 +18,50 @@ namespace RemoteEffectRole.Controllers
         {
             try {
                 string error = String.Empty;
-                string compiledWith = String.Empty;
+                Version compiledWith;
                 byte[] buf = RunMGCB(value.Code, value.Platform, value.Version, out error, out compiledWith);
-                return new Result() { Compiled = buf, Error = error, CompiledWith = compiledWith };
+                return new Result() { Compiled = buf, Error = error, CompiledWith = compiledWith.ToString () };
             } catch (Exception ex)
             {
                 return new Result() { Error = ex.ToString() };
             }
         }
 
-        static string GetVersion(string version)
+        static Version GetVersion(string version)
         {
-            var v =version.Split(new char[] { '.' });
-            return v.Length ==4 ? $"{v[0]}.{v[1]}" : version;
+            Version result;
+            if (!Version.TryParse (version, out result))
+            {
+                return new Version(3, 5);
+            }
+            return result;
         }
 
-        static byte[] RunMGCB(string code, string platform, string version, out string error, out string compiledWith)
+        static string Find2MGFXForVersion (Version version)
+        {
+            var root = Path.Combine(HttpContext.Current.Server.MapPath(@"~\"), "Tools");
+            var dirs = Directory.EnumerateDirectories(root, "*", SearchOption.TopDirectoryOnly);
+            foreach (var dir in dirs.OrderByDescending(x => Version.Parse(Path.GetFileName(x))))
+            {
+                string result = Path.Combine(dir, "2MGFX.exe");
+                var v = Version.Parse(Path.GetFileName(dir));
+                if (v == version)
+                {
+                    return result;
+                }
+                if (version.Build != -1 && v == new Version (version.Major, version.MajorRevision, version.Minor))
+                {
+                    return result;
+                }
+                if (v == new Version(version.Major, version.MajorRevision))
+                {
+                    return result;
+                }
+            }
+            return null;
+        }
+
+        static byte[] RunMGCB(string code, string platform, string version, out string error, out Version compiledWith)
         {
             string[] platforms = new string[]
             {
@@ -45,10 +73,11 @@ namespace RemoteEffectRole.Controllers
             };
 
             compiledWith = GetVersion(version);
-            var mgfxExe = Path.Combine(HttpContext.Current.Server.MapPath(@"~\"),"Tools", compiledWith, "2MGFX.exe");
-            if (!File.Exists (mgfxExe))
+            var mgfxExe =  Find2MGFXForVersion(compiledWith);
+            
+            if (string.IsNullOrEmpty (mgfxExe) || !File.Exists (mgfxExe))
             {
-                compiledWith = "3.5";
+                compiledWith = new Version(3, 5);
                 mgfxExe = Path.Combine(HttpContext.Current.Server.MapPath(@"~\"), "Tools", "2MGFX.exe");
             }
             error = String.Empty;
