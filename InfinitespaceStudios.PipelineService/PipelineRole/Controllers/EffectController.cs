@@ -49,11 +49,11 @@ namespace RemoteEffectRole.Controllers
                 {
                     return result;
                 }
-                if (version.Build != -1 && v == new Version (version.Major, version.MajorRevision, version.Minor))
+                if (version.Build != -1 && v == new Version (version.Major, version.Minor, version.Build))
                 {
                     return result;
                 }
-                if (v == new Version(version.Major, version.MajorRevision))
+                if (v == new Version(version.Major, version.Minor))
                 {
                     return result;
                 }
