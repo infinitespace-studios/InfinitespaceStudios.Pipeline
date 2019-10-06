@@ -1,7 +1,7 @@
 # InfinitespaceStudios.Pipeline
 
 This repo contains the Public Extensions for the MonoGame Content Pipeline developed by Infinitespace Studios. 
-All code is under the MS-PL licence. 
+All code is under the MIT licence. 
 
 ## RemoteEffectProcessor
 
