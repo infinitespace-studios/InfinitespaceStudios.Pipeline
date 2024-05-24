@@ -3,6 +3,8 @@
 This repo contains the Public Extensions for the MonoGame Content Pipeline developed by Infinitespace Studios. 
 All code is under the MIT licence. 
 
+This Repo is archived. For details on how to compile MonoGame shaders on MacOS/Linux please refer to the offical documentation https://docs.monogame.net/articles/getting_started/1_setting_up_your_development_environment_unix.html#optional-setup-wine-for-effect-compilation
+
 ## RemoteEffectProcessor
 
 This processor is designed to allow Mac OS and Linux developers compile shaders on their platforms. It does this by 
